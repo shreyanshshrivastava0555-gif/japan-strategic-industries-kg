@@ -132,3 +132,7 @@ python app.py ask "How does Imabari connect to Japan's emissions goal?"
 python app.py chat            # interactive Q&A
 python app.py stats           # graph statistics
 ```
+
+## License
+
+Released under the [MIT License](LICENSE).
