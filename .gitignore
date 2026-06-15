@@ -1,0 +1,22 @@
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+
+# Generated graph artifacts (auto-rebuilt on first run)
+knowledge_graph/output/
+
+# Environment / secrets
+.env
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledge Graph — Japan Strategic Industries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.9/standalone/umd/vis-network.min.js"></script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo-link"><div class="logo">KG</div></a>
+      <div>
+        <h1>Japan Strategic Industries</h1>
+        <p>Agentic Knowledge-Graph Intelligence · Shipbuilding × Green Tech</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/graph.html" class="active">Knowledge Graph</a>
+    </nav>
+    <div class="top-stats" id="topStats">
+      <div class="stat"><span id="statNodes">–</span><label>Nodes</label></div>
+      <div class="stat"><span id="statEdges">–</span><label>Edges</label></div>
+      <div class="stat"><span id="statMode">–</span><label>Engine</label></div>
+      <div class="stat status" id="health"><span class="dot"></span><label>API</label></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- Graph panel -->
+    <section class="graph-panel">
+      <div class="panel-head">
+        <h2>Knowledge Graph</h2>
+        <div class="controls">
+          <input id="searchBox" placeholder="Find a node…" />
+          <button id="btnFit" class="ghost" title="Fit to screen">Fit</button>
+          <button id="btnBuild" class="ghost">Rebuild</button>
+          <button id="btnFetch" class="primary">Fetch Live Data</button>
+        </div>
+      </div>
+      <div id="network"></div>
+      <div class="legend" id="legend"></div>
+      <div class="loading" id="graphLoading"><div class="spinner"></div><span>Loading graph…</span></div>
+    </section>
+
+    <!-- Chat / side panel -->
+    <aside class="side-panel">
+      <div class="tabs">
+        <button class="tab active" data-tab="chat">Ask the Graph</button>
+        <button class="tab" data-tab="insights">Insights</button>
+        <button class="tab" data-tab="news">Live News</button>
+      </div>
+
+      <!-- Chat -->
+      <div class="tab-body active" id="tab-chat">
+        <div class="chat" id="chat">
+          <div class="msg bot">
+            <p>Hi! Ask me how anything in Japan's shipbuilding &amp; green-tech strategy connects.
+            I'll walk the graph and highlight the path.</p>
+          </div>
+        </div>
+        <div class="suggestions" id="suggestions"></div>
+        <form class="composer" id="composer">
+          <input id="question" placeholder="e.g. How does Imabari connect to Japan's emissions goal?" autocomplete="off" />
+          <button type="submit" id="sendBtn">Ask</button>
+        </form>
+      </div>
+
+      <!-- Insights -->
+      <div class="tab-body" id="tab-insights">
+        <h3>Graph Composition</h3>
+        <div id="categoryBars" class="bars"></div>
+        <h3>Most Connected (Hubs)</h3>
+        <ol id="hubs" class="hubs"></ol>
+        <div class="meta" id="metaInfo"></div>
+      </div>
+
+      <!-- News -->
+      <div class="tab-body" id="tab-news">
+        <p class="hint">Click <b>Fetch Live Data</b> to pull the latest real-world news from the web and merge it into the graph.</p>
+        <ul id="newsList" class="news"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

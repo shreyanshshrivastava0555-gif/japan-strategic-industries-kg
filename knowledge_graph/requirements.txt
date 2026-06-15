@@ -1,0 +1,8 @@
+networkx>=3.0
+matplotlib>=3.5
+pyvis>=0.3.2
+openai>=1.0
+requests>=2.28
+beautifulsoup4>=4.11
+feedparser>=6.0
+lxml>=4.9

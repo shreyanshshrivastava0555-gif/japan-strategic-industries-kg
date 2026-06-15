@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan Strategic Industries — Knowledge Graph Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="home">
+  <header class="topbar">
+    <div class="brand">
+      <a href="/" class="logo-link"><div class="logo">KG</div></a>
+      <div>
+        <h1>Japan Strategic Industries</h1>
+        <p>Agentic Knowledge-Graph Intelligence · Shipbuilding × Green Tech</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="/" class="active">Home</a>
+      <a href="/graph.html">Knowledge Graph</a>
+    </nav>
+    <div class="top-stats">
+      <div class="stat status" id="health"><span class="dot"></span><label>API</label></div>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="badge">Agentic GenAI · LLM · Knowledge Graph</span>
+        <h2>Japan's shipbuilding &amp; green-tech strategy, mapped as a graph you can talk to.</h2>
+        <p>
+          This platform reads research and live news, extracts the companies, technologies,
+          policies and national targets, and connects them into a knowledge graph — then lets
+          you ask questions in plain English and watch the answer light up across the map.
+        </p>
+        <div class="hero-cta">
+          <a href="/graph.html" class="btn-primary">Open Knowledge Graph →</a>
+          <a href="/graph.html" class="btn-ghost">Ask a question</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span id="hNodes">–</span><label>Entities</label></div>
+        <div class="hstat"><span id="hEdges">–</span><label>Connections</label></div>
+        <div class="hstat"><span id="hMode">–</span><label>Engine</label></div>
+        <div class="hstat"><span id="hVersion">–</span><label>Graph Ver.</label></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="feature-card">
+        <div class="fc-icon" style="background:#4C72B033;color:#7aa6ff">◉</div>
+        <h3>Interactive Graph</h3>
+        <p>Explore companies, tech, policies and targets as a zoomable, searchable network.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon" style="background:#2bd9a833;color:#2bd9a8">✦</div>
+        <h3>Ask the Graph</h3>
+        <p>Natural-language Q&amp;A. The agent walks the connections and highlights the path.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon" style="background:#E8A33D33;color:#E8A33D">⟳</div>
+        <h3>Live Web Data</h3>
+        <p>Pull the latest real-world news and merge current events straight into the graph.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon" style="background:#8172B333;color:#b3a6ff">▦</div>
+        <h3>Insights Dashboard</h3>
+        <p>See the composition, the most-connected hubs, and how the two sectors converge.</p>
+      </div>
+    </section>
+
+    <!-- Sample questions -->
+    <section class="samples">
+      <h3 class="section-title">Try asking</h3>
+      <div id="sampleQs" class="sample-qs"></div>
+    </section>
+
+    <footer class="home-footer">
+      <span>Knowledge Graph Builder Agent · Agentic GenAI / LLM model</span>
+      <a href="/docs" target="_blank">API Docs</a>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="/home.js"></script>
+</body>
+</html>
